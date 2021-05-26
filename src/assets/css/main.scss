@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import "404.scss";
 
 $background: #000000;
 $primarycolor: #cacaca;
@@ -60,7 +59,7 @@ body.light-mode .box {
     background: $boxes;
     color: #3d4048;
     margin: 10px;
-    height: 90%;
+    height: fit-content;
 }
 body.light-mode .box .title {
     color: #3d4048;
@@ -402,7 +401,7 @@ p.shrink img {
     color: $default;
     border-radius: 10px;
     margin: 10px;
-    height: 90%;
+    height: fit-content;
 }
 .box .title {
     color: $light;
