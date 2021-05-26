@@ -2,7 +2,7 @@
 
 module.exports = {
   publicPath:
-    process.env.NODE_ENV === "production" ? "/covid19-dashboard/" : "/",
+    process.env.NODE_ENV === "production" ? "/covid-dashboard/" : "/",
   pwa: {
     name: "COVID-19 Dashboard",
     themeColor: "#15192b",
