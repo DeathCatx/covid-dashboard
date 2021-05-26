@@ -102,7 +102,6 @@ export default {
     tablecountry: {},
     totalcases: 0,
     totalpopulation: 0,
-    totalaffected: 0,
     active: 0,
     critical: 0,
     recovered: 0,
@@ -154,7 +153,6 @@ export default {
       this.todaydata = this.all;
       this.totalcases = this.all.cases;
       this.totalpopulation = this.all.population;
-      this.totalaffected = this.all.affectedCountries;
       this.active = this.all.active;
       this.critical = this.all.critical;
       this.recovered = this.all.recovered;

@@ -30,7 +30,6 @@ export default {
   name: "app",
   data: () => ({
     dark: true,
-    //showNavbar: true,
     lastScrollPosition: 0
   }),
   methods: {
@@ -50,32 +49,11 @@ export default {
     setdarkMode() {
       document.querySelector("body").classList.remove("light-mode");
       this.darkMode = true;
-    } //,
-    //onScroll() {
-    //  const currentScrollPosition =
-    //    window.pageYOffset || document.documentElement.scrollTop;
-    //  if (currentScrollPosition < 0) {
-    //    return;
-    //  }
-    //  // Stop executing this function if the difference between
-    //  // current scroll position and last scroll position is less than some offset
-    //  if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
-    //    return;
-    //  }
-    //  this.showNavbar = currentScrollPosition < this.lastScrollPosition;
-    //  this.lastScrollPosition = currentScrollPosition;
-    //}
+    }
   },
   components: {
-    //Topwrapper,
     About
   },
-  //mounted() {
-  //  window.addEventListener("scroll", this.onScroll);
-  //},
-  //beforeDestroy() {
-  //  window.removeEventListener("scroll", this.onScroll);
-  //},
   metaInfo() {
     return {
       title: "COVID-19 Dashboard",

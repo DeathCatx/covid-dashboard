@@ -1,9 +1,6 @@
 <template>
   <div id="tablecases">
     <p>Population: <ICountUp :endVal="parseInt(total)" /></p>
-    <!--
-    <p>Affected Countries: <ICountUp :endVal="parseInt(affected)" /></p>
-    -->
     <div class="tablecases__container table-container">
       <table class="table is-narrow is-hoverable is-fullwidth">
         <thead>

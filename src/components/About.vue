@@ -27,7 +27,7 @@
                 <a :href="original" target="_blank">Zekinah Lecaros</a>
               </p>
               <p class="mb-3">
-                Icons from
+                Icons:
                 <a
                   href="https://www.flaticon.com/"
                   title="Flaticon"
