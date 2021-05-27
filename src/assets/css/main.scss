@@ -88,7 +88,7 @@ body.light-mode .content table thead th {
 body.light-mode .popup-main .popup__image img {
     outline-offset: -100px;
     overflow: hidden;
-    margin: 0 0 -5px 0;
+    margin: 0 0 -5px;
     outline: unset;
     mix-blend-mode: unset;
     filter: unset;
@@ -267,6 +267,9 @@ div#card-cases, div#cases, div#map-cases {
 }
 .card {
     height: 90%;
+    margin: 10px;
+    border-radius: 10px;
+    background: #1f1f1f;
 }
 .title {
     font-size: 1.5rem;
@@ -283,11 +286,6 @@ div#card-cases, div#cases, div#map-cases {
 }
 body.light-mode .card {
     background: #F6FBFB;
-}
-.card{
-    margin: 10px;
-    border-radius: 10px;
-    background: #1f1f1f;
 }
 .card-content {
     text-align: center;
@@ -308,7 +306,7 @@ body.light-mode .card p.title {
     background: rgba(255,255,255,.1);
 }
 .card p.title {
-    padding: 15px 30px 0px;
+    padding: 15px 30px 0;
     border-radius: 10px;
 }
 .headings {
@@ -355,16 +353,14 @@ p.shrink img {
 .popup-main .popup__image {
     background-color: unset;
     transition: all 0.25s cubic-bezier(0.61, 1.01, 1, 1) 0s;
+    text-align: center;
+    background-color: #ffffff;
 }
 .popup-main:hover .popup__image img {
     outline: unset;
     mix-blend-mode: unset;
     filter: unset;
     transition: all 0.25s cubic-bezier(0.61, 1.01, 1, 1) 0s;
-}  
-.popup-main .popup__image {
-    text-align: center;
-    background-color: #ffffff;
 }
 .popup-main .popup__image img {
     outline: 100px solid rgba(2, 205, 169, 0.30);
@@ -372,7 +368,7 @@ p.shrink img {
     overflow: hidden;
     mix-blend-mode: multiply;
     filter: grayscale(80%) contrast(1) brightness(90%);
-    margin: 0 0 -5px 0;
+    margin: 0 0 -5px;
 }
 .popup-main .popup__content .title {
     margin: auto;
@@ -480,8 +476,6 @@ span.info {
 }
 .sitefooter .footer__content {
     font-size: 10px;
-}
-.sitefooter .footer__content {
     color: $light;
 }
 .sitefooter .footer__content .dmca {

@@ -23,8 +23,9 @@ export default {
 };
 </script>
 <style lang="scss">
-body, html {
-	height: 100vh;
+body,
+html {
+  height: 100vh;
 }
 .center__me {
   position: absolute;
