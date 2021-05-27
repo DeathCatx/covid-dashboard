@@ -35,6 +35,5 @@ npm run build
 - [ ] Daily cases graphs.
 - [ ] Add days selection for historical graphs.
 
-## Known issues
+## Known issue
 * API returns error 404 on province selection, therefore not updating map and graph. (e.g. Hong Kong)
-* Bad precaching response
