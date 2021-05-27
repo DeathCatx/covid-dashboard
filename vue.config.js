@@ -8,6 +8,12 @@ module.exports = {
     msTileColor: "#15192b",
     appleMobileWebAppCapable: "yes",
     appleMobileWebAppStatusBarStyle: "#15192b",
-    workboxPluginMode: "GenerateSW"
+    workboxPluginMode: 'InjectManifest',
+    workboxOptions: {
+        // swSrc is required in InjectManifest mode.
+        swSrc: 'service-worker.js',
+        // ...other Workbox options...
+        exclude: [/_redirects/]
+    }
   }
 };
