@@ -1,9 +1,3 @@
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
-
-importScripts(
-  "/covid-dashboard/precache-manifest.81e8bcd3cf33f0a1ee80f74639172b01.js"
-);
-
 workbox.core.setCacheNameDetails({prefix: "covid-dashboard"});
 
 self.addEventListener('message', (event) => {
