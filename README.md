@@ -1,5 +1,7 @@
-
 # COVID-19 Dashboard
+[![CodeFactor](https://img.shields.io/codefactor/grade/github/deathcatx/covid-dashboard/master)]
+[![CodeSize](https://img.shields.io/github/languages/code-size/deathcatx/covid-dashboard)]
+[![License](https://img.shields.io/github/license/deathcatx/covid-dashboard)]
 
 ## 📐 Project setup
 ```
