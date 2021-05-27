@@ -4,8 +4,8 @@
     "display": "browser",
     "scope": "/",
     "start_url": "/",
-    "name": "COVID-19 Dashboard",
-    "short_name": "Covid Dashboard",
+    "name": "covid-dashboard",
+    "short_name": "covid-dashboard",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
