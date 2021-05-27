@@ -34,4 +34,7 @@ npm run build
 - [ ] Sortable table.
 - [ ] Daily cases graphs.
 - [ ] Add days selection for historical graphs.
-- [ ] Fix API returns error 404 on province selection, therefore not updating map and graph.
+
+## Known issues
+* API returns error 404 on province selection, therefore not updating map and graph. (e.g. Hong Kong)
+* Bad precaching response
