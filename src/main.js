@@ -6,6 +6,7 @@ import { Icon } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import VueMeta from "vue-meta";
 import VueAnalytics from "vue-analytics";
+import "./registerServiceWorker";
 
 require("./assets/css/main.scss");
 
