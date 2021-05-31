@@ -23,10 +23,10 @@
                 {{ cases.country }}
               </p>
             </td>
-            <td><ICountUp :endVal="parseInt(cases.cases)" /></td>
-            <td><ICountUp :endVal="parseInt(cases.recovered)" /></td>
-            <td><ICountUp :endVal="parseInt(cases.deaths)" /></td>
-            <td><ICountUp :endVal="parseInt(cases.active)" /></td>
+            <td>{{ cases.cases }}</td>
+            <td>{{ cases.recovered }}</td>
+            <td>{{ cases.deaths }}</td>
+            <td>{{ cases.active }}</td>
           </tr>
         </tbody>
       </table>

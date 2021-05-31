@@ -20,41 +20,39 @@
             :stroke="false"
           >
             <l-popup>
-              <a class="popup-detail">
-                <div class="popup-main">
-                  <div class="popup__image">
-                    <img :src="l.countryInfo.flag" :alt="l.countryInfo.iso3" />
+              <div class="popup-main">
+                <div class="popup__image">
+                  <img :src="l.countryInfo.flag" :alt="l.countryInfo.iso3" />
+                </div>
+                <div class="popup__content">
+                  <p class="title">{{ l.country }}</p>
+                  <div class="columns">
+                    <div class="column">
+                      <p>Cases: <ICountUp :endVal="parseInt(l.cases)" /></p>
+                    </div>
                   </div>
-                  <div class="popup__content">
-                    <p class="title">{{ l.country }}</p>
-                    <div class="columns">
-                      <div class="column">
-                        <p>Cases: <ICountUp :endVal="parseInt(l.cases)" /></p>
-                      </div>
+                  <div class="columns">
+                    <div class="column">
+                      <p>Active:</p>
+                      <ICountUp :endVal="parseInt(l.active)" />
                     </div>
-                    <div class="columns">
-                      <div class="column">
-                        <p>Active:</p>
-                        <ICountUp :endVal="parseInt(l.active)" />
-                      </div>
-                      <div class="column">
-                        <p>Critical:</p>
-                        <ICountUp :endVal="parseInt(l.critical)" />
-                      </div>
+                    <div class="column">
+                      <p>Critical:</p>
+                      <ICountUp :endVal="parseInt(l.critical)" />
                     </div>
-                    <div class="columns">
-                      <div class="column">
-                        <p>Recovered:</p>
-                        <ICountUp :endVal="parseInt(l.recovered)" />
-                      </div>
-                      <div class="column">
-                        <p>Deaths:</p>
-                        <ICountUp :endVal="parseInt(l.deaths)" />
-                      </div>
+                  </div>
+                  <div class="columns">
+                    <div class="column">
+                      <p>Recovered:</p>
+                      <ICountUp :endVal="parseInt(l.recovered)" />
+                    </div>
+                    <div class="column">
+                      <p>Deaths:</p>
+                      <ICountUp :endVal="parseInt(l.deaths)" />
                     </div>
                   </div>
                 </div>
-              </a>
+              </div>
             </l-popup>
           </l-circle-marker>
         </l-map>

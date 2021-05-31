@@ -183,9 +183,6 @@ export default {
       }
     },
   },
-  mounted() {
-    this.$ga.page("/home");
-  },
   components: {
     CardCases,
     Map,
