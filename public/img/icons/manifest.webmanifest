@@ -5,7 +5,7 @@
     "scope": "/",
     "start_url": "/",
     "name": "covid-dashboard",
-    "short_name": "covid-dashboard",
+    "short_name": "dashboard",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",

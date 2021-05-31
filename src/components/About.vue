@@ -94,7 +94,7 @@ export default {
     github: "https://github.com/zekinah/pandemiccovid-19",
     stargazers: "https://github.com/zekinah/pandemiccovid-19/stargazers",
     website: "https://github.com/DeathCatx",
-    original: "https://zekinahlecaros.com/"
-  })
+    original: "https://zekinahlecaros.com/",
+  }),
 };
 </script>

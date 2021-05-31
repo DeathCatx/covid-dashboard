@@ -4,7 +4,7 @@ const http = axios.create({
   baseURL:
     process.env.NODE_ENV === "production"
       ? "http://localhost:8080"
-      : "http://localhost:8080"
+      : "http://localhost:8080",
 });
 
 export default {
@@ -51,5 +51,5 @@ export default {
       "https://disease.sh/v3/covid-19/historical/" + iso + "?lastdays=92"
     );
     return data;
-  }
+  },
 };

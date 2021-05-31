@@ -21,11 +21,11 @@ export default {
       dailyCases: [],
       options: {
         chart: {
-          id: "daily-cases"
+          id: "daily-cases",
         },
-        xaxis: {}
+        xaxis: {},
       },
-      series: []
+      series: [],
     };
   },
   async created() {
@@ -39,21 +39,21 @@ export default {
       const recoveredtotal = Object.values(val.recovered);
       this.$refs.chart.updateOptions({
         dataLabels: {
-          enabled: false
+          enabled: false,
         },
         stroke: {
-          curve: "smooth"
+          curve: "smooth",
         },
         tooltip: {
-          theme: "dark"
+          theme: "dark",
         },
         colors: ["#00a4db", "#ff2323", "#00897B"],
         legend: {
           fontSize: "14px",
           fontFamily: "Space Mono",
           labels: {
-            colors: "#A8B2CD"
-          }
+            colors: "#A8B2CD",
+          },
         },
         xaxis: {
           type: "datetime",
@@ -61,33 +61,33 @@ export default {
           labels: {
             hideOverlappingLabels: true,
             style: {
-              colors: "#A8B2CD"
-            }
+              colors: "#A8B2CD",
+            },
           },
-          tickAmount: 10
+          tickAmount: 10,
         },
         yaxis: {
           labels: {
             style: {
-              colors: "#A8B2CD"
-            }
-          }
-        }
+              colors: "#A8B2CD",
+            },
+          },
+        },
       });
 
       const series = [
         {
           name: "Confirmed",
-          data: casestotal
+          data: casestotal,
         },
         {
           name: "Deceased",
-          data: deathstotal
+          data: deathstotal,
         },
         {
           name: "Recovered",
-          data: recoveredtotal
-        }
+          data: recoveredtotal,
+        },
       ];
       this.$refs.chart.updateSeries(series);
     },
@@ -101,30 +101,30 @@ export default {
           type: "datetime",
           categories: casesdate,
           labels: {
-            hideOverlappingLabels: true
+            hideOverlappingLabels: true,
           },
-          tickAmount: 10
-        }
+          tickAmount: 10,
+        },
       });
       const series = [
         {
           name: "Confirmed",
-          data: casestotal
+          data: casestotal,
         },
         {
           name: "Deceased",
-          data: deathstotal
+          data: deathstotal,
         },
         {
           name: "Recovered",
-          data: recoveredtotal
-        }
+          data: recoveredtotal,
+        },
       ];
       this.$refs.chart.updateSeries(series);
-    }
+    },
   },
   components: {
-    apexchart: VueApexCharts
-  }
+    apexchart: VueApexCharts,
+  },
 };
 </script>

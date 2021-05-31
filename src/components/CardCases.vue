@@ -70,10 +70,10 @@ export default {
     todayCases: Number,
     todayRecovered: Number,
     todayDeaths: Number,
-    todayActive: String
+    todayActive: String,
   },
   components: {
-    ICountUp
-  }
+    ICountUp,
+  },
 };
 </script>

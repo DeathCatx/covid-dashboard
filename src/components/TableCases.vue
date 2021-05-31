@@ -40,7 +40,7 @@ export default {
   name: "tablecases",
   props: ["casesbycountry", "total"],
   components: {
-    ICountUp
-  }
+    ICountUp,
+  },
 };
 </script>

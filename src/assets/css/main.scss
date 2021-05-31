@@ -1,5 +1,5 @@
 @import "~bulma/bulma";
-@import url("https://fonts.googleapis.com/css?family=Permanent+Marker:400");
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker:400&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -357,7 +357,6 @@ p.shrink img {
     font-family: $primaryfont;
 }  
 .popup-main .popup__image {
-    background-color: unset;
     transition: all 0.25s cubic-bezier(0.61, 1.01, 1, 1) 0s;
     text-align: center;
     background-color: #ffffff;

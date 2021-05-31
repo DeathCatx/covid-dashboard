@@ -82,7 +82,7 @@ export default {
     center: [13, 122],
     bounds: null,
     casesbycountry: [],
-    mapOption: { preferCanvas: true }
+    mapOption: { preferCanvas: true },
   }),
   async created() {
     this.casesbycountry = await api.getbyCountries();
@@ -91,9 +91,9 @@ export default {
     flyTo(lat, lon) {
       this.$refs.map.mapObject.flyTo([lat, lon], 5, {
         animate: true,
-        duration: 2
+        duration: 2,
       });
-    }
+    },
   },
   watch: {
     data(val) {
@@ -102,20 +102,20 @@ export default {
         5,
         {
           animate: true,
-          duration: 2
+          duration: 2,
         }
       );
     },
     theme(val) {
       this.tileLayerUrl = val ? this.tileDarkLayerUrl : this.tileLightLayerUrl;
-    }
+    },
   },
   components: {
     LMap,
     LTileLayer,
     LCircleMarker,
     LPopup,
-    ICountUp
-  }
+    ICountUp,
+  },
 };
 </script>

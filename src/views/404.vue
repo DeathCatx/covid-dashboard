@@ -15,11 +15,11 @@ import SiteFooter from "@/components/SiteFooter.vue";
 export default {
   name: "404",
   components: {
-    SiteFooter
+    SiteFooter,
   },
   mounted() {
     this.$ga.page("/404");
-  }
+  },
 };
 </script>
 <style lang="scss">

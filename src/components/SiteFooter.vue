@@ -29,6 +29,6 @@
 
 <script>
 export default {
-  name: "sitefooter"
+  name: "sitefooter",
 };
 </script>

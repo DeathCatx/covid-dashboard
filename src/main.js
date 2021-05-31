@@ -20,11 +20,11 @@ delete Icon.Default.prototype._getIconUrl;
 Vue.use(VueAnalytics, {
   id: "UA-169027561-2",
   autoTracking: {
-    screenview: true
-  }
+    screenview: true,
+  },
 });
 
 new Vue({
   router,
-  render: h => h(App)
+  render: (h) => h(App),
 }).$mount("#app");

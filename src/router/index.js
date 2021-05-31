@@ -8,19 +8,19 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home
+    component: Home,
   },
   {
     path: "*",
     name: "404",
-    component: () => import(/* webpackChunkName: "about" */ "../views/404.vue")
-  }
+    component: () => import(/* webpackChunkName: "about" */ "../views/404.vue"),
+  },
 ];
 
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes
+  routes,
 });
 
 export default router;

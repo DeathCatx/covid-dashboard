@@ -30,7 +30,7 @@ export default {
   name: "app",
   data: () => ({
     dark: true,
-    lastScrollPosition: 0
+    lastScrollPosition: 0,
   }),
   methods: {
     toggle() {
@@ -49,10 +49,10 @@ export default {
     setdarkMode() {
       document.querySelector("body").classList.remove("light-mode");
       this.darkMode = true;
-    }
+    },
   },
   components: {
-    About
+    About,
   },
   metaInfo() {
     return {
@@ -61,10 +61,10 @@ export default {
         {
           name: "description",
           content:
-            "Worldwide Tracker of Pandemic Covid-19, with visualization of graph, table, and map"
-        }
-      ]
+            "Worldwide Tracker of Pandemic Covid-19, with visualization of graph, table, and map",
+        },
+      ],
     };
-  }
+  },
 };
 </script>
