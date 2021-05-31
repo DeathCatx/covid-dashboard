@@ -201,26 +201,30 @@ div#visual {
 }
 .recover {
     content: url("../icon/recover.svg");
-    height:50px;
-    width: 50px;
+    height:3.125rem;
+    width: 3.125rem;
+    aspect-ratio: attr(width) / attr(height);
     margin-right: 15px;
 }
 .death {
     content: url("../icon/tombstone.svg");
-    height:50px;
-    width: 50px;
+    height:3.125rem;
+    width: 3.125rem;
+    aspect-ratio: attr(width) / attr(height);
     margin-right: 15px;
 }
 .active {
     content: url("../icon/coronavirus.svg");
-    height:50px;
-    width: 50px;
+    height:3.125rem;
+    width: 3.125rem;
+    aspect-ratio: attr(width) / attr(height);
     margin-right: 15px;
 }
 .critical {
     content: url("../icon/heartbeat.svg");
-    height:50px;
-    width: 50px;
+    height:3.125rem;
+    width: 3.125rem;
+    aspect-ratio: attr(width) / attr(height);
     margin-right: 15px;
 }
 button.delete::before{
@@ -261,7 +265,9 @@ header.intro .intro__tagline {
     font-size: 0.8rem;
     display: block;
 }
-
+.select{
+    max-width: 80%;
+}
 div#card-cases, div#cases, div#map-cases {
     padding: 0 0 50px;
 }

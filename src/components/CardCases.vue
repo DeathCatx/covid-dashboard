@@ -6,7 +6,7 @@
           <div class="card">
             <div class="card-content">
               <div class="headings">
-                <img class="recover" />
+                <img class="recover" alt="recover" />
                 <p class="subtitle is-5">Recovered</p>
               </div>
               <p class="title"><ICountUp :endVal="recovered" /></p>
@@ -20,7 +20,7 @@
           <div class="card">
             <div class="card-content">
               <div class="headings">
-                <img class="death" />
+                <img class="death" alt="deaths" />
                 <p class="subtitle is-5">Deaths</p>
               </div>
               <p class="title"><ICountUp :endVal="deaths" /></p>
@@ -34,7 +34,7 @@
           <div class="card">
             <div class="card-content">
               <div class="headings">
-                <img class="active" />
+                <img class="active" alt="active" />
                 <p class="subtitle is-5">Active</p>
               </div>
               <p class="title"><ICountUp :endVal="active" /></p>
@@ -46,7 +46,7 @@
           <div class="card">
             <div class="card-content">
               <div class="headings">
-                <img class="critical" />
+                <img class="critical" alt="critical" />
                 <p class="subtitle is-5">Critical</p>
               </div>
               <p class="title"><ICountUp :endVal="critical" /></p>

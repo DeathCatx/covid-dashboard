@@ -4,13 +4,21 @@
       <p>
         Initial work by
         <strong
-          ><a href="//www.zekinahlecaros.com/" target="_blank">
+          ><a
+            href="https://www.zekinahlecaros.com/"
+            target="_blank"
+            rel="noopener"
+          >
             Zekinah Lecaros</a
           ></strong
         >
         and improved by
         <strong
-          ><a href="https://github.com/DeathCatx" target="_blank">
+          ><a
+            href="https://github.com/DeathCatx"
+            target="_blank"
+            rel="noopener"
+          >
             DeathCatx</a
           ></strong
         >

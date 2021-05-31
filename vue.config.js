@@ -8,10 +8,11 @@ module.exports = {
     msTileColor: "#15192b",
     appleMobileWebAppCapable: "yes",
     appleMobileWebAppStatusBarStyle: "#15192b",
-    workboxPluginMode: 'InjectManifest',
+    manifestPath: "/public/manifest.webmanifest",
+    workboxPluginMode: "InjectManifest",
     workboxOptions: {
-        swSrc: 'service-worker.js',
-        exclude: [/\.map$/,/_redirects/]
+      swSrc: "service-worker.js",
+      exclude: [/\.map$/, /_redirects/]
     }
   }
 };

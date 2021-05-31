@@ -1,7 +1,7 @@
-workbox.core.setCacheNameDetails({prefix: "covid-dashboard"});
+workbox.core.setCacheNameDetails({ prefix: "covid-dashboard" });
 
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
+self.addEventListener("message", event => {
+  if (event.data && event.data.type === "SKIP_WAITING") {
     self.skipWaiting();
   }
 });

@@ -7,6 +7,7 @@
           style="z-index: 0; height: 100%; width: 100%"
           :zoom="zoom"
           :center="center"
+          :options="mapOption"
         >
           <l-tile-layer :url="tileLayerUrl"></l-tile-layer>
           <l-circle-marker
@@ -80,22 +81,13 @@ export default {
     zoom: 3,
     center: [13, 122],
     bounds: null,
-    casesbycountry: []
+    casesbycountry: [],
+    mapOption: { preferCanvas: true }
   }),
   async created() {
     this.casesbycountry = await api.getbyCountries();
   },
-  mounted() {
-    this.getUserLocation();
-  },
   methods: {
-    getUserLocation() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(({ coor }) => {
-          this.flyTo(coor.latitude, coor.longitude);
-        });
-      }
-    },
     flyTo(lat, lon) {
       this.$refs.map.mapObject.flyTo([lat, lon], 5, {
         animate: true,

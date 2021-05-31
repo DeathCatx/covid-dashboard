@@ -24,7 +24,9 @@
               </p>
               <p class="mb-3">
                 Originally made by
-                <a :href="original" target="_blank">Zekinah Lecaros</a>
+                <a :href="original" target="_blank" rel="noopener"
+                  >Zekinah Lecaros</a
+                >
               </p>
               <p class="mb-3">
                 Icons:
@@ -32,31 +34,40 @@
                   href="https://www.flaticon.com/"
                   title="Flaticon"
                   target="_blank"
+                  rel="noopener"
                   >Flaticon</a
                 >
               </p>
               <p class="mb-3">
                 API Used:
-                <a :href="diseaseapi" target="_blank">disease.sh</a>
+                <a :href="diseaseapi" target="_blank" rel="noopener"
+                  >disease.sh</a
+                >
               </p>
               <p class="mb-3">
                 Data Source:
-                <a :href="jhu" target="_blank">Johns Hopkins University</a>, and
-                <a :href="worldometer" target="_blank">Worldometers</a>
+                <a :href="jhu" target="_blank" rel="noopener"
+                  >Johns Hopkins University</a
+                >, and
+                <a :href="worldometer" target="_blank" rel="noopener"
+                  >Worldometers</a
+                >
               </p>
               <p class="mb-3">
-                Built with <a :href="vuejs" target="_blank">Vue JS</a>,
-                <a :href="bulma" target="_blank">Bulma</a>,
-                <a :href="leaftet" target="_blank">Leaflet</a>,
-                <a :href="chart" target="_blank">Chart</a>, and
-                <a :href="countup" target="_blank">Count Up</a>
+                Built with
+                <a :href="vuejs" target="_blank" rel="noopener">Vue JS</a>,
+                <a :href="bulma" target="_blank" rel="noopener">Bulma</a>,
+                <a :href="leaftet" target="_blank" rel="noopener">Leaflet</a>,
+                <a :href="chart" target="_blank" rel="noopener">Chart</a>, and
+                <a :href="countup" target="_blank" rel="noopener">Count Up</a>
               </p>
             </div>
             <div class="about__footer">
               <p class="is-size-7 has-text-centered">
                 <strong>
                   Made with ❤️ by
-                  <a :href="website" target="_blank">DeathCatx</a>.</strong
+                  <a :href="website" target="_blank" rel="noopener">DeathCatx</a
+                  >.</strong
                 >
               </p>
             </div>
