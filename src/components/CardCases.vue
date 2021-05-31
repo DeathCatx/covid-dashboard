@@ -1,7 +1,7 @@
 <template>
   <div id="card-cases">
     <div class="card-cases__container container">
-      <div class="columns is-desktop">
+      <div class="columns">
         <div class="column">
           <div class="card">
             <div class="card-content">

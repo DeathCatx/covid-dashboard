@@ -12,6 +12,12 @@ module.exports = {
     workboxOptions: {
       //swSrc: "service-worker.js",
       exclude: [/\.map$/, /_redirects/],
+      runtimeCaching: [
+        {
+          urlPattern: /\.(?:png|jpg|jpeg|svg|json)$/,
+          handler: "StaleWhileRevalidate",
+        },
+      ],
     },
   },
 };
