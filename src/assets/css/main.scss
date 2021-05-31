@@ -199,33 +199,23 @@ div#visual {
     height: 25px;
     cursor: pointer;
 }
-.recover {
-    content: url("../icon/recover.svg");
+.recover, .death, .active, .critical {
     height:3.125rem;
     width: 3.125rem;
     aspect-ratio: attr(width) / attr(height);
     margin-right: 15px;
+}
+.recover {
+    content: url("../icon/recover.svg");
 }
 .death {
     content: url("../icon/tombstone.svg");
-    height:3.125rem;
-    width: 3.125rem;
-    aspect-ratio: attr(width) / attr(height);
-    margin-right: 15px;
 }
 .active {
     content: url("../icon/coronavirus.svg");
-    height:3.125rem;
-    width: 3.125rem;
-    aspect-ratio: attr(width) / attr(height);
-    margin-right: 15px;
 }
 .critical {
     content: url("../icon/heartbeat.svg");
-    height:3.125rem;
-    width: 3.125rem;
-    aspect-ratio: attr(width) / attr(height);
-    margin-right: 15px;
 }
 button.delete::before{
     width: 100%;
