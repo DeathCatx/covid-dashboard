@@ -7,6 +7,7 @@ import "leaflet/dist/leaflet.css";
 import VueMeta from "vue-meta";
 import "./registerServiceWorker";
 import Buefy from "buefy";
+import "buefy/dist/buefy.css";
 
 require("./assets/css/main.scss");
 
