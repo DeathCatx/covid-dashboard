@@ -3,7 +3,7 @@ import axios from "axios";
 const http = axios.create({
   baseURL:
     process.env.NODE_ENV === "production"
-      ? "http://localhost:8080"
+      ? "https://deathcatx.github.io/covid-dashboard/"
       : "http://localhost:8080",
 });
 

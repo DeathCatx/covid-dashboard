@@ -19,7 +19,6 @@
       </div>
       <About />
     </header>
-
     <router-view :dark="dark" />
   </div>
 </template>
