@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="overall">
-      <h5 class="overall_cases_title">Total Cases</h5>
+      <h2 class="overall_cases_title">Total Cases</h2>
       <h3 class="overall_cases"><ICountUp :endVal="parseInt(totalcases)" /></h3>
       <span class="info"
         >(+<ICountUp :endVal="parseInt(todayCases)" /> Today)</span
