@@ -1,4 +1,7 @@
+@use "sass:math";
+
 @import "~bulma/bulma";
+@import "~buefy/src/scss/buefy";
 @import url("https://fonts.googleapis.com/css?family=Permanent+Marker:400&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -14,6 +17,7 @@ $link: #8892b0;
 $map: #011019;
 $lightgreen: #00fffa;
 $boxes: #F6FBFB;
+
 
 *, *:before, *:after {
     box-sizing:  border-box !important;
@@ -77,12 +81,10 @@ body.light-mode .table {
     color: #000000;
 }
 body.light-mode .content table thead td, body.light-mode .content table thead th {
-    color: #525252;
+    color: #525252 !important;
 }
 body.light-mode .content table thead th {
-    position: sticky;
-    top: 0;
-    background: #eeeeee;
+    background: #eeeeee !important;
 }
 body.light-mode .popup-main .popup__image img {
     outline-offset: -100px;
@@ -115,6 +117,7 @@ body.light-mode .icon-info {
     background-color: #8892b0;
 }
 ::-webkit-scrollbar {
+    height: 0.8em;
     width: 0.8em;
 }
 ::-webkit-scrollbar-thumb {
@@ -201,7 +204,7 @@ div#visual {
 .recover, .death, .active, .critical {
     height:3.125rem;
     width: 3.125rem;
-    aspect-ratio: attr(width) / attr(height);
+    aspect-ratio: math.div(attr(width), attr(height));
     margin-right: 15px;
 }
 .recover {
@@ -434,12 +437,10 @@ article.box:after {
     width: 100%;
 }
 .content table thead td, .content table thead th {
-    color: $primarycolor;
+    color: $primarycolor !important;
 }
 .content table thead th {
-    position: sticky;
-    top: 0;
-    background: #313131;
+    background: #313131 !important;
 }
 .table.is-hoverable tbody tr:not(.is-selected):hover {
     background-color: #fafafa47;

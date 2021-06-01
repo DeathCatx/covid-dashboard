@@ -2,34 +2,17 @@
   <div id="tablecases">
     <p>Population: <ICountUp :endVal="parseInt(total)" /></p>
     <div class="tablecases__container table-container">
-      <table class="table is-narrow is-hoverable is-fullwidth">
-        <thead>
-          <tr>
-            <th>Country</th>
-            <th>Total Cases</th>
-            <th>Recovered</th>
-            <th>Deaths</th>
-            <th>Active</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr ref="tablecase" v-for="cases in casesbycountry" :key="cases.iso2">
-            <td>
-              <p class="shrink">
-                <img
-                  :src="cases.countryInfo.flag"
-                  :alt="cases.countryInfo.iso2"
-                />
-                {{ cases.country }}
-              </p>
-            </td>
-            <td>{{ cases.cases }}</td>
-            <td>{{ cases.recovered }}</td>
-            <td>{{ cases.deaths }}</td>
-            <td>{{ cases.active }}</td>
-          </tr>
-        </tbody>
-      </table>
+      <b-table
+        :data="Object.keys(casesbycountry).map((key) => casesbycountry[key])"
+        :columns="columns"
+        :loading="isLoading"
+        :mobile-cards="false"
+        :hoverable="true"
+        :default-sort-direction="sortDirection"
+        :sticky-header="true"
+        :height="500"
+      >
+      </b-table>
     </div>
   </div>
 </template>
@@ -37,10 +20,53 @@
 <script>
 import ICountUp from "vue-countup-v2";
 export default {
+  data: () => ({
+    isLoading: true,
+    sortDirection: "desc",
+    columns: [
+      {
+        field: "country",
+        label: "Country",
+        sortable: true,
+      },
+      {
+        field: "cases",
+        label: "Total Cases",
+        sortable: true,
+        numeric: true,
+      },
+      {
+        field: "recovered",
+        label: "Recovered",
+        sortable: true,
+        numeric: true,
+      },
+      {
+        field: "deaths",
+        label: "Deaths",
+        sortable: true,
+        numeric: true,
+      },
+      {
+        field: "active",
+        label: "Active",
+        sortable: true,
+        numeric: true,
+      },
+    ],
+  }),
+  mounted() {
+    this.isLoading = false;
+  },
   name: "tablecases",
   props: ["casesbycountry", "total"],
   components: {
     ICountUp,
+  },
+  computed: {
+    //casesCountry: function() {
+    //  return Object.values(this.casesbycountry).map( (key) => ({ cases }) );
+    //}
   },
 };
 </script>
