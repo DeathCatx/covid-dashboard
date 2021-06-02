@@ -37,6 +37,9 @@ export default {
       const casestotal = Object.values(val.cases);
       const deathstotal = Object.values(val.deaths);
       const recoveredtotal = Object.values(val.recovered);
+      const active = casestotal.map(function (num, idx) {
+        return num - deathstotal[idx] - recoveredtotal[idx];
+      });
       this.$refs.chart.updateOptions({
         dataLabels: {
           enabled: false,
@@ -47,7 +50,7 @@ export default {
         tooltip: {
           theme: "dark",
         },
-        colors: ["#00a4db", "#ff2323", "#00897B"],
+        colors: ["#00a4db", "#ff2323", "#00897B", "#ffba00"],
         legend: {
           fontSize: "14px",
           fontFamily: "Space Mono",
@@ -88,6 +91,10 @@ export default {
           name: "Recovered",
           data: recoveredtotal,
         },
+        {
+          name: "Active",
+          data: active,
+        },
       ];
       this.$refs.chart.updateSeries(series);
     },
@@ -96,6 +103,9 @@ export default {
       const casestotal = Object.values(val.cases);
       const deathstotal = Object.values(val.deaths);
       const recoveredtotal = Object.values(val.recovered);
+      const active = casestotal.map(function (num, idx) {
+        return num - deathstotal[idx] - recoveredtotal[idx];
+      });
       this.$refs.chart.updateOptions({
         xaxis: {
           type: "datetime",
@@ -118,6 +128,10 @@ export default {
         {
           name: "Recovered",
           data: recoveredtotal,
+        },
+        {
+          name: "Active",
+          data: active,
         },
       ];
       this.$refs.chart.updateSeries(series);
