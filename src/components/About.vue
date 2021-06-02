@@ -19,8 +19,8 @@
             <div class="about__content">
               <p class="title is-1">COVID-19 Dashboard</p>
               <p class="mb-3">
-                A Web app and PWA compatible worldwide tracker of Pandemic
-                Covid-19, with visualization of graph, table, and map.
+                A PWA compatible Web application for Covid-19 pandemic, with
+                visualization of graph, table, and map.
               </p>
               <p class="mb-3">
                 Originally made by

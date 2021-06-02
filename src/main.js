@@ -6,13 +6,12 @@ import { Icon } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import VueMeta from "vue-meta";
 import "./registerServiceWorker";
-import Buefy from "buefy";
-import "buefy/dist/buefy.css";
+import { Table } from "buefy";
 
 require("./assets/css/main.scss");
 
 Vue.use(VueMeta);
-Vue.use(Buefy);
+Vue.use(Table);
 
 Vue.config.productionTip = false;
 
