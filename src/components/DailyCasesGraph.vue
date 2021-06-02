@@ -26,6 +26,9 @@ export default {
         xaxis: {},
       },
       series: [],
+      noData: {
+        text: "Loading...",
+      },
     };
   },
   async created() {
