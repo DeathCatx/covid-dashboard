@@ -42,7 +42,6 @@
       :todayActive="todayActive"
     />
     <Map :data="country" :theme="dark" />
-    <!--TodayCases :data="todaydata" /-->
     <div id="visual">
       <div class="visual__container container">
         <div class="tile is-ancestor">
@@ -63,6 +62,14 @@
             <div class="tile is-child box">
               <p class="title">Cumulative Cases in 3 Months</p>
               <div class="content">
+                <CumulativeGraph :data="history.timeline" />
+              </div>
+            </div>
+          </div>
+          <div class="tile is-6 is-vertical is-parent">
+            <div class="tile is-child box">
+              <p class="title">Daily Cases in 3 Months</p>
+              <div class="content">
                 <DailyCasesGraph :data="history.timeline" />
               </div>
             </div>
@@ -79,6 +86,7 @@ import api from "@/Api";
 import CardCases from "@/components/CardCases.vue";
 import Map from "@/components/Map.vue";
 import TableCases from "@/components/TableCases.vue";
+import CumulativeGraph from "@/components/CumulativeGraph.vue";
 import DailyCasesGraph from "@/components/DailyCasesGraph.vue";
 import SiteFooter from "@/components/SiteFooter.vue";
 import ICountUp from "vue-countup-v2";
@@ -178,8 +186,6 @@ export default {
         this.country = await api.getByCountry(iso);
         this.carddata = this.country;
         this.todaydata = this.country;
-        //this.tablecountry = {}; //Pre Reset
-        //this.tablecountry[0] = this.country;
       }
     },
   },
@@ -187,6 +193,7 @@ export default {
     CardCases,
     Map,
     TableCases,
+    CumulativeGraph,
     DailyCasesGraph,
     SiteFooter,
     ICountUp,

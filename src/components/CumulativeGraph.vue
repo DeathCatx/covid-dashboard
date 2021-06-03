@@ -1,5 +1,5 @@
 <template>
-  <div id="daily-cases chart">
+  <div id="cumulative-cases chart">
     <apexchart
       ref="chart"
       width="100%"
@@ -14,14 +14,14 @@
 import api from "@/Api";
 import VueApexCharts from "vue-apexcharts";
 export default {
-  name: "dailycasesgraph",
+  name: "cumulativegraph",
   props: ["data"],
   data() {
     return {
       dailyCases: [],
       options: {
         chart: {
-          id: "daily-cases",
+          id: "cumulative-cases",
         },
         xaxis: {},
       },
@@ -42,38 +42,6 @@ export default {
       const recoveredtotal = Object.values(val.recovered);
       const active = casestotal.map(function (num, idx) {
         return num - deathstotal[idx] - recoveredtotal[idx];
-      });
-      var casestoday = casestotal.map(function (val, index) {
-        const previous = casestotal[index - 1];
-        if (!isNaN(previous)) {
-          return val - previous;
-        } else {
-          return NaN;
-        }
-      });
-      var deathtoday = deathstotal.map(function (val, index) {
-        const previous = deathstotal[index - 1];
-        if (!isNaN(previous)) {
-          return val - previous;
-        } else {
-          return NaN;
-        }
-      });
-      var recovertoday = recoveredtotal.map(function (val, index) {
-        const previous = recoveredtotal[index - 1];
-        if (!isNaN(previous)) {
-          return val - previous;
-        } else {
-          return NaN;
-        }
-      });
-      var activetoday = active.map(function (val, index) {
-        const previous = active[index - 1];
-        if (!isNaN(previous)) {
-          return val - previous;
-        } else {
-          return NaN;
-        }
       });
       this.$refs.chart.updateOptions({
         dataLabels: {
@@ -116,19 +84,19 @@ export default {
       const series = [
         {
           name: "Confirmed",
-          data: casestoday,
+          data: casestotal,
         },
         {
           name: "Deceased",
-          data: deathtoday,
+          data: deathstotal,
         },
         {
           name: "Recovered",
-          data: recovertoday,
+          data: recoveredtotal,
         },
         {
           name: "Active",
-          data: activetoday,
+          data: active,
         },
       ];
       this.$refs.chart.updateSeries(series);
@@ -140,38 +108,6 @@ export default {
       const recoveredtotal = Object.values(val.recovered);
       const active = casestotal.map(function (num, idx) {
         return num - deathstotal[idx] - recoveredtotal[idx];
-      });
-      var casestoday = casestotal.map(function (val, index) {
-        const previous = casestotal[index - 1];
-        if (!isNaN(previous)) {
-          return val - previous;
-        } else {
-          return NaN;
-        }
-      });
-      var deathtoday = deathstotal.map(function (val, index) {
-        const previous = deathstotal[index - 1];
-        if (!isNaN(previous)) {
-          return val - previous;
-        } else {
-          return NaN;
-        }
-      });
-      var recovertoday = recoveredtotal.map(function (val, index) {
-        const previous = recoveredtotal[index - 1];
-        if (!isNaN(previous)) {
-          return val - previous;
-        } else {
-          return NaN;
-        }
-      });
-      var activetoday = active.map(function (val, index) {
-        const previous = active[index - 1];
-        if (!isNaN(previous)) {
-          return val - previous;
-        } else {
-          return NaN;
-        }
       });
       this.$refs.chart.updateOptions({
         xaxis: {
@@ -186,19 +122,19 @@ export default {
       const series = [
         {
           name: "Confirmed",
-          data: casestoday,
+          data: casestotal,
         },
         {
           name: "Deceased",
-          data: deathtoday,
+          data: deathstotal,
         },
         {
           name: "Recovered",
-          data: recovertoday,
+          data: recoveredtotal,
         },
         {
           name: "Active",
-          data: activetoday,
+          data: active,
         },
       ];
       this.$refs.chart.updateSeries(series);
