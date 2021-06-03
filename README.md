@@ -31,7 +31,6 @@ npm run build
 * Icons from [Flaticon](https://www.flaticon.com)
 
 ## To-do list
-- [ ] Daily cases graphs.
 - [ ] Add days selection for historical graphs.
 
 ## Known issue
