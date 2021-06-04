@@ -20,7 +20,8 @@ npm run build
 
 ## 🛠 Built with
 * [VueJS](https://vuejs.org/)
-* [Bulma](http://bulma.io/)
+* [Bulma](https://bulma.io/)
+* [Buefy](https://buefy.org/)
 * [Disease-API](https://github.com/disease-sh/API)
 * [Vue Leaflet](https://github.com/vue-leaflet/Vue2Leaflet)
 * [Vue Chart](https://github.com/apertureless/vue-chartjs)
