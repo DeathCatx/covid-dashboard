@@ -31,8 +31,5 @@ npm run build
 * **[Zekinah Lecaros](https://github.com/zekinah/pandemiccovid-19)** - *Initial work* - 
 * Icons from [Flaticon](https://www.flaticon.com)
 
-## To-do list
-- [ ] Add days selection for historical graphs.
-
 ## Known issue
 * API returns error 404 on province selection, therefore not updating map and graph. (e.g. Hong Kong)
