@@ -44,9 +44,6 @@ export default {
         return num - deathstotal[idx] - recoveredtotal[idx];
       });
       this.$refs.chart.updateOptions({
-        animations: {
-          animateGradually: true,
-        },
         dataLabels: {
           enabled: false,
         },
