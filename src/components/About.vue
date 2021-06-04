@@ -57,6 +57,7 @@
                 Built with
                 <a :href="vuejs" target="_blank" rel="noopener">Vue JS</a>,
                 <a :href="bulma" target="_blank" rel="noopener">Bulma</a>,
+                <a :href="buefy" target="_blank" rel="noopener">Buefy</a>,
                 <a :href="leaftet" target="_blank" rel="noopener">Leaflet</a>,
                 <a :href="chart" target="_blank" rel="noopener">Chart</a>, and
                 <a :href="countup" target="_blank" rel="noopener">Count Up</a>
@@ -85,6 +86,7 @@ export default {
     showModal: false,
     vuejs: "https://vuejs.org/",
     bulma: "https://bulma.io/",
+    buefy: "https://buefy.org/",
     diseaseapi: "https://github.com/disease-sh/API",
     jhu: "https://github.com/CSSEGISandData/COVID-19",
     worldometer: "https://www.worldometers.info/coronavirus/",

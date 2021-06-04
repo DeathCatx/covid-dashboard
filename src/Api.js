@@ -38,17 +38,17 @@ export default {
     );
     return data;
   },
-  async getDailyCases() {
+  async getDailyCases(time) {
     //Get Daily Overall Total Cases World Wide
     const { data } = await http.get(
-      "https://disease.sh/v3/covid-19/historical/all?lastdays=92"
+      "https://disease.sh/v3/covid-19/historical/all?lastdays=" + time
     );
     return data;
   },
-  async getDailyCasesByCountry(iso) {
+  async getDailyCasesByCountry(iso, time) {
     //Get Daily Cases in 30days on a specific Countries by iso
     const { data } = await http.get(
-      "https://disease.sh/v3/covid-19/historical/" + iso + "?lastdays=92"
+      "https://disease.sh/v3/covid-19/historical/" + iso + "?lastdays=" + time
     );
     return data;
   },

@@ -60,7 +60,17 @@
           </div>
           <div class="tile is-6 is-vertical is-parent">
             <div class="tile is-child box">
-              <p class="title">Cumulative Cases in 3 Months</p>
+              <p class="title">Cumulative Cases</p>
+              <div class="timeline-option">
+                <label class="timeline" for="time">Timeline: </label>
+                <div class="select">
+                  <select name="time" id="bytime" v-model="bytime">
+                    <option value="all">All</option>
+                    <option selected value="92">3 Months</option>
+                    <option value="31">30 Days</option>
+                  </select>
+                </div>
+              </div>
               <div class="content">
                 <CumulativeGraph :data="history.timeline" />
               </div>
@@ -68,9 +78,23 @@
           </div>
           <div class="tile is-6 is-vertical is-parent">
             <div class="tile is-child box">
-              <p class="title">Daily Cases in 3 Months</p>
+              <p class="title">Daily Cases</p>
+              <div class="timeline-option">
+                <label class="timeline" for="timeDaily">Timeline: </label>
+                <div class="select">
+                  <select
+                    name="timeDaily"
+                    id="byDailytime"
+                    v-model="byDailytime"
+                  >
+                    <option value="all">All</option>
+                    <option selected value="92">3 Months</option>
+                    <option value="31">30 Days</option>
+                  </select>
+                </div>
+              </div>
               <div class="content">
-                <DailyCasesGraph :data="history.timeline" />
+                <DailyCasesGraph :data="history2.timeline" />
               </div>
             </div>
           </div>
@@ -107,8 +131,13 @@ export default {
     history: {
       timeline: {},
     },
+    history2: {
+      timeline: {},
+    },
     country: {},
     tablecountry: {},
+    bytime: "92",
+    byDailytime: "92",
     totalcases: 0,
     totalpopulation: 0,
     active: 0,
@@ -177,15 +206,37 @@ export default {
     },
     bycountry: async function () {
       let iso = this.bycountry.countryInfo.iso2;
+      let time = this.bytime;
+      let timeDaily = this.byDailytime;
       if (iso == "all") {
-        this.history.timeline = await api.getDailyCases();
+        this.history.timeline = await api.getDailyCases(time);
+        this.history2.timeline = await api.getDailyCases(timeDaily);
         this.getAll();
         this.getCountries();
       } else {
-        this.history = await api.getDailyCasesByCountry(iso);
+        this.history = await api.getDailyCasesByCountry(iso, time);
+        this.history2 = await api.getDailyCasesByCountry(iso, timeDaily);
         this.country = await api.getByCountry(iso);
         this.carddata = this.country;
         this.todaydata = this.country;
+      }
+    },
+    bytime: async function () {
+      let iso = this.bycountry.countryInfo.iso2;
+      let time = this.bytime;
+      if (iso == "all") {
+        this.history.timeline = await api.getDailyCases(time);
+      } else {
+        this.history = await api.getDailyCasesByCountry(iso, time);
+      }
+    },
+    byDailytime: async function () {
+      let iso = this.bycountry.countryInfo.iso2;
+      let timeDaily = this.byDailytime;
+      if (iso == "all") {
+        this.history2.timeline = await api.getDailyCases(timeDaily);
+      } else {
+        this.history2 = await api.getDailyCasesByCountry(iso, timeDaily);
       }
     },
   },
